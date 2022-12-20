@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = " UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title> Django Practice</title>
+</head>
+<body>
+<section class="py-10">
+<h1 class="text-center text-4xl">Programing Books</h1>
+<div class="grid grid-cols-3 gap-4">
+    
+    {% for book in books %}
+    <a href="/book/1" class="justify-self-center text-center my-4" target="_blank">
+        <div class="justify-self-center">
+            <img src="{{book.thumbnailUrl}}" width="200" />
+        </div>
+        <p class="text-lg text-gray-700">{{book.title}}</p>
+    </a>
+    {% endfor %}
+</div>
+</section>
+</body>
+</html>
